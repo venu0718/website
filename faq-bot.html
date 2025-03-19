@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Bot | My Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Store</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="category.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2>FAQ Bot</h2>
+        <div class="chat-box">
+            <div id="chat-content"></div>
+            <input type="text" id="user-input" placeholder="Ask a question..." class="form-control">
+            <button onclick="askQuestion()" class="btn btn-primary mt-2">Ask</button>
+        </div>
+    </div>
+
+    <script>
+        function askQuestion() {
+            const input = document.getElementById("user-input").value.toLowerCase();
+            const chatContent = document.getElementById("chat-content");
+
+            let answer;
+            if (input.includes("shipping")) {
+                answer = "We offer free shipping on orders above $50.";
+            } else if (input.includes("return")) {
+                answer = "You can return products within 30 days of purchase.";
+            } else {
+                answer = "I'm sorry, I don't understand. Please try another question.";
+            }
+
+            chatContent.innerHTML += `<p><strong>You:</strong> ${input}</p>`;
+            chatContent.innerHTML += `<p><strong>Bot:</strong> ${answer}</p>`;
+            document.getElementById("user-input").value = ""; // Clear input
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
