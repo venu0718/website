@@ -47,7 +47,7 @@ Shopfinity is live on **Vercel**! You can deploy it yourself:
 We welcome contributions! Feel free to **fork**, create a new branch, make changes, and submit a **pull request**. Let's make Shopfinity even better! 🚀
 
 ## 📩 Contact
-Got questions? Reach out to us at **[your-email@example.com](mailto:your-email@example.com)** or open an **issue** in this repository.
+Got questions? Reach out to us at **[venugopal08820@gmail.com](thideepocean@gmail.com)** or open an **issue** in this repository.
 
 ---
 💙 **Happy Shopping with Shopfinity!** 🛍️🚀
